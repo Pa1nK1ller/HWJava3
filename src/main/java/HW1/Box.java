@@ -2,11 +2,9 @@ package HW1;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Box<T extends Fruit> {
     private ArrayList<T> fruitList;
-    private double totalWeight;
 
     public Box() {
         this.fruitList = new ArrayList<>();
@@ -19,16 +17,15 @@ public class Box<T extends Fruit> {
     }
 
     public double getTotalWeight() {
-        float totalWeight = 0.0f;
+        double totalWeight = 0.0f;
         for (T o : fruitList) {
-        totalWeight+= o.getWeight();
+        totalWeight += o.getWeight();
         }
         return totalWeight;
     }
 
     public boolean compare(Box anotherBox) {
-        if (getTotalWeight() == anotherBox.getTotalWeight()) return true;
-        return false;
+        return getTotalWeight() == anotherBox.getTotalWeight();
     }
 
     public void pourIntoAnother(Box<T> anotherBox) {

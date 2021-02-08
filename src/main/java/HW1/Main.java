@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         //1е задание
-        Integer arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-        String arr2[] = {"A", "B", "C", "D", "E"};
+        Integer[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        String[] arr2 = {"A", "B", "C", "D", "E"};
         swap(arr1, 1, 5);
         swap(arr2, 0, 4);
 
@@ -21,10 +21,10 @@ public class Main {
         //3е задание
         Box<Orange> or = new Box<>();
         Box<Orange> or1 = new Box<>();
-        Box<Orange> or2 = new Box<>();
+
         Box<Apple> ap = new Box<>();
         Box<Apple> ap1 = new Box<>();
-        Box<Apple> ap2 = new Box<>();
+
 
         or.addFruit(new Orange());
         or.addFruit(new Orange());
@@ -42,12 +42,7 @@ public class Main {
         System.out.println("Вес Box 1 равен весу Box 2? "+ or.compare(ap));
 
         or.pourIntoAnother(or1);
-//        or.addFruit(new Orange());
         ap.pourIntoAnother(ap1);
-        /*ap.addFruit(new Apple());
-        or1.addFruit(new Orange());
-        ap1.addFruit(new Apple());
-        */
         System.out.println("Orange Box1: " +or.getTotalWeight());
         System.out.println("Orange Box2: "+ or1.getTotalWeight());
         System.out.println("Apple Box1: " +ap.getTotalWeight());
